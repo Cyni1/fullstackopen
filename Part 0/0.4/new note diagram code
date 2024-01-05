@@ -9,6 +9,12 @@ sequenceDiagram
     Note right of browser: the server asks the browser to do a new HTTP GET request to the address defined in the header's Location
     deactivate server
 
+    browser -->> server: HTTP GET https://fullstack-exampleapp.herokuapp.com/notes
+    activate server
+    server -->> browser: HTML-code
+    activate browser
+    deactivate server
+
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.css
     activate server
     server-->>browser: the css file
